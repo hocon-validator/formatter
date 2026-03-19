@@ -46,6 +46,7 @@ jobs:
             test/1.hocon
             test/2.hocon
             test/3.hocon
+            test/4.hocon
           artifact-name: ${{ matrix.artifact-name }}
           indentation: ${{ matrix.indentation }}
           suppress-failure: 1

@@ -1,0 +1,12 @@
+{
+    a = """this"""
+   b = "that" 
+    c = """
+this
+that
+"""
+x = "k"
+    # d = "then" // comment
+# another comment
+e = "something"
+}
