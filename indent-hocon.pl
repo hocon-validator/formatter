@@ -45,7 +45,7 @@ LINE: while (<>) {
   s/\x{00a0}/ /g;
   s/(?<!")"([^"])+"/<>/; # ignore quoted strings
   s/\$\{.*?\}/<>/; # ignore variable substitutions
-  if (s!(.*)(?://|#).*?!$1!) {
+  if (s!(.*?)(?://|#).*?!$1!) {
     # ignore comments
     if ($comment_prefix eq '') {
       my $new_comment_prefix = $1;
