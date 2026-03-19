@@ -55,12 +55,7 @@ LINE: while (<>) {
     $comment_prefix = '';
   }
   if (! $in_block_quote || /"""/) {
-    while (s/^(.*?)"""(.*)$//) {
-      if ($in_block_quote) {
-        $_ = $2;
-      } else {
-        $_ = $1;
-      }
+    while (s/^(.*?)"""(.*)$/$2/) {
       $in_block_quote ^= 1;
     };
     s/^(\s*)\x{00a0}/$1 /g;
